@@ -1,0 +1,142 @@
+/*
+  전체 페이지 테마 등록
+*/
+:root {
+	--green: #287a5b;
+	--green-dark: #1f6047;
+	--green-light: #e8f4ee;
+	--ink: #24332d;
+	--muted: #78857f;
+	--line: #e5ece8;
+	--surface: #ffffff;
+	--background: #f4f8f5;
+	--danger: #c45454;
+	font-family: "pretendard", "Noto Sans KR", "Mlagun Gothic", sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/* 태그 바디를 만나면 이렇게 설정 */
+body{
+	margin:0;
+	color: var(--ink);
+	background: radial-gradient(circle at 90% 0%, #e7f4eb 0, transparent 28rem),
+				var(--background);
+}
+/* 전체 헤더 영역 */
+.topbar{
+	display: flex; /* 둘러싸인 topbar안의 영역들을 유연하게 배치하라(주로 가로 또는 세로 영역) */
+	justify-content: space-between; /*내용물을 균등정렬 */
+	align-items: center;
+	gap : 24px; /*content 사이의 여백 조절 */
+	padding: 48px 0 30px;
+				
+}
+/* 좌측 상단 헤더 */
+.page{
+	width: min(1120px, calc(100% - 40px));
+	margin: 0 auto;
+}
+
+.eyebrow{
+	margin: 0, 0 9px;
+	color: var(--green);
+	font-size: 11px;
+	font-weight: 800;
+	letter-spacing: 1.7px;
+}
+.subtitle{
+	margin-bottom: 0;
+	color: var(--muted);
+}
+/* 우측 상단 헤더 */
+.today-box{
+	min-width: 180px;
+	padding: 16px, 20px;
+	border: 1px, solid var(--line);
+	border-radius: 16px;
+	background: rgba(255, 255, 255,.8);
+	text-align: right;
+}
+.today-label{
+	display:block; /*이 클래스 안의 문장은 블럭처럼 동작 */
+				   /* inline + <br> */
+	margin-bottom: 6px; /* 태그 사이의 여백이 아래쪽만 */
+	color:var(--muted);
+	font-size: 10px;
+	font-weight: 900;
+	letter-spacing: 1.5px;
+	
+}
+#todayDate{
+	font-size: 16px;
+	font-weight: bolder;
+	
+}
+/*main의 첫번째 패널 */
+.focus-panel {
+	display: flex;
+	justify-content: space-between; /* 표시 내용들 여백O */
+	align-items: center;
+	gap: 20px;
+	padding: 28px 32px;
+	border-radius: 22px;
+	color: white;
+	background: linear-gradient(115deg, #287a5b, #459b75);
+}
+
+/*.focus-panel 안의 .eyebrow selector에 적용 */
+.focus-panel .eyebrow {
+	color: #c8ead8;
+}
+
+/*.focus-panel의 h2태그 */
+.focus-panel h2{
+	margin-bottom: 8px;
+	font-size: clamp(20px, 3vw, 26px);
+	letter-spacing: -.8px;
+}
+
+/* .focus-panel/p/last-child 속성 설정 */
+.focus-panel p:last-child {
+	margin-bottom: 8px;
+	color: #e1f2ef;
+	font-size: 14px;
+}
+.focus-mark {
+	display: grid;
+	flex: 0 0 62px;
+	place-items: center;
+	width: 62px;
+	height: 62px;
+	border: 1px solid rgba(255, 255, 255, .45);
+	border-radius: 50%;
+	color: white;
+	font-size: 30px;
+}
+
+/* 오늘의 할일 영역 */
+.summary-grid {
+	
+}
+.summary-card {
+	
+}
+.summary-label {
+	
+}
+#totalCount {
+	
+}
+.summary-unit{
+	
+}
+footer{
+	/*main영역과 여백 주기 */
+	padding: 28px 0 35px;
+	color: #9aa69f;
+	text-align: center;
+	font-size: 12px;
+}
