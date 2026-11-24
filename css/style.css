@@ -119,19 +119,65 @@ body{
 
 /* 오늘의 할일 영역 */
 .summary-grid {
-	
+	display: grid; /* 표 모양으로 배치 */
+	/* 그리드 기본 칸 나누기 */
+	grid-template-columns: 1fr 1fr 2fr;
+	/* 컬럼 사이의 간격 */
+	gap: 16px;
+	/*     아래,위 /좌,우 */
+	margin: 18px 0;
 }
 .summary-card {
-	
+	min-height: 112px;
+	padding: 20px 22px;
+}
+
+/* .summary-card와 .panel 공통 적용 */
+.summary-card, .panel{
+	border: 1px solid var(--line);
+	border-radius: 18px;
+	background: var(--surface);
+	box-shadow: 0 7px 24px rgba(33, 67, 49, .04);
 }
 .summary-label {
-	
+	display:block;
+	margin-bottom: 9px;
+	color: var(--muted);
+	font-size: 13px;
 }
-#totalCount {
-	
+
+.summary-card > strong {
+	font-size: 30px;
 }
+
 .summary-unit{
-	
+	margin-left: 5px;
+	color: var(--muted);
+	font-size: 13px;
+}
+
+/*완료 그래프 창 영역 */
+.progress-heading{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.progress-heading strong{
+	color:var(--green);
+	font-size: 22px;	
+}
+.progress-track{
+	height: 100px;
+	overflow:hidden;
+	border-radius: 99px;
+	background: #edf2ef;
+}
+.progress-fill{
+	width: 0;
+	height: 100%;
+	border-radius: inherit;
+	background: var(--green);
+	transition: width .25s ease;
 }
 footer{
 	/*main영역과 여백 주기 */
